@@ -1,33 +1,69 @@
-# 🚀 Full Stack Chat Application with Kubernetes Deployment
+# 💬 Chat App on Kubernetes
 
-This repository contains my work on deploying a **Full Stack Chat Application** using **Docker and Kubernetes**.  
-The application consists of a React frontend, Node.js/Express backend, and MongoDB database.  
-
-I mainly focused on the **DevOps and deployment side** of this project.
+A full-stack **Chat Application** deployed using **Kubernetes (K8s)** on Minikube.  
+This project demonstrates my ability to containerize applications, manage deployments, and orchestrate services using Kubernetes.
 
 ---
 
-## 🔹 My Contributions
-- Containerized the application using **Docker**.
-- Wrote **Kubernetes YAML manifests** for frontend, backend, and MongoDB.
-- Configured **Persistent Volume & Persistent Volume Claim (PVC)** for MongoDB data.
-- Exposed services using **NodePort** and tested with Minikube.
-- Set up environment variables and `.env` files for secure configuration.
-- Verified communication between pods using `kubectl logs` and `kubectl get svc`.
-
----
-
-## 🔹 Tech Stack
-- **Frontend:** React.js + TailwindCSS  
-- **Backend:** Node.js + Express  
+## 🚀 Tech Stack
+- **Frontend:** React.js  
+- **Backend:** Node.js (Express)  
 - **Database:** MongoDB  
 - **Containerization:** Docker  
-- **Orchestration:** Kubernetes (Minikube)  
+- **Orchestration:** Kubernetes (Deployments, Services, PVC, Ingress/NodePort)  
+- **CI/CD:** GitHub Actions  
 
 ---
+```markdown
+```
+## ⚙️ How to Run Locally
 
-## 🔹 Run Locally with Minikube
+### **1. Clone Repository**
 
-1. Start Minikube:
-   ```bash
-   minikube start
+git clone https://github.com/AtishayJain457/chat-app-k8s.git
+cd chat-app-k8s
+2. Start Minikube
+
+minikube start
+3. Apply Kubernetes Manifests
+kubectl apply -f k8s/
+4. Verify Deployments
+
+kubectl get pods -n chat-app
+
+kubectl get svc -n chat-app
+5. Access Application
+
+minikube service frontend -n chat-app
+
+
+
+
+**✨ My Contributions
+
+Created and configured Kubernetes manifests for frontend, backend, and MongoDB.
+
+Integrated NodePort/Ingress for external access.
+
+Set up Persistent Storage (PVC/PV) for MongoDB.
+
+Implemented CI/CD workflow for deploying changes faster.
+
+Customized README and documentation for professional project showcase.
+
+🔮 Future Improvements
+
+Implement WebSockets for real-time messaging.
+
+Add Docker Compose for local non-K8s deployment.
+
+CI/CD pipeline with Jenkins or GitHub Actions.
+
+Add monitoring with Prometheus & Grafana.
+
+📜 License
+
+This project is for learning and demonstration purposes.
+Feel free to fork and contribute! 🚀
+
+**
