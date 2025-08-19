@@ -22,18 +22,18 @@ This project demonstrates my ability to containerize applications, manage deploy
 
 git clone https://github.com/AtishayJain457/chat-app-k8s.git
 cd chat-app-k8s
-2. Start Minikube
 
+2. Start Minikube
 minikube start
+
 3. Apply Kubernetes Manifests
 kubectl apply -f k8s/
+
 4. Verify Deployments
-
 kubectl get pods -n chat-app
-
 kubectl get svc -n chat-app
-5. Access Application
 
+6. Access Application
 minikube service frontend -n chat-app
 
 
@@ -51,6 +51,8 @@ Implemented CI/CD workflow for deploying changes faster.
 
 Customized README and documentation for professional project showcase.
 
+
+
 🔮 Future Improvements
 
 Implement WebSockets for real-time messaging.
@@ -60,6 +62,8 @@ Add Docker Compose for local non-K8s deployment.
 CI/CD pipeline with Jenkins or GitHub Actions.
 
 Add monitoring with Prometheus & Grafana.
+
+
 
 📜 License
 
