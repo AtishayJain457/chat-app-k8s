@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: chat-app
+spec:
+  type: NodePort   # 👈 change here
+  selector:
+    app: frontend
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30080   # 👈 add this (pick a port between 30000–32767)
